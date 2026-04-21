@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chuck Norris Jokes</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <h1>Chuck Norris Facts</h1>
+    <ul class="jokes-list">
+      <li
+        v-for="(joke, index) in chuck"
+        :key="index"
+        class="joke-item">
+        <span class="joke-number">#{{ index + 1 }}</span>
+        <p>{{ joke.value }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
